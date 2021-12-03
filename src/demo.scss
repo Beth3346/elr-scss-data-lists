@@ -10,6 +10,16 @@
   font-family: Roboto;
 }
 
+hr {
+  display: block;
+  height: 0;
+  border: 0;
+  border-top: $border;
+  margin: 1em 0;
+  padding: 0;
+  width: 100%;
+}
+
 .wrapper {
   max-width: $content-width;
   margin: auto;
@@ -38,4 +48,44 @@
 .demo-content {
   position: relative;
   padding: ($base-fontsize * 1.5) 0;
+}
+
+dl {
+  div {
+    margin: $base-fontsize 0;
+  }
+
+  dt,
+  dd {
+    margin: ($base-fontsize * 0.25) 0;
+    padding: 0;
+  }
+
+  dt {
+    color: $text-color;
+  }
+
+  dd {
+    color: lighten($text-color, 0.7);
+    font-size: $base-fontsize * 0.875;
+  }
+
+  &.dl-inline {
+    div {
+      display: flex;
+      align-items: center;
+    }
+
+    dt {
+      margin-right: $base-fontsize * 0.5;
+    }
+
+    dd {
+      margin-left: $base-fontsize * 0.5;
+    }
+  }
+}
+
+.data-list {
+  @include elr-data-list;
 }
