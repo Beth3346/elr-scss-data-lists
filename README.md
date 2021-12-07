@@ -19,7 +19,74 @@ or
 yarn add elr-scss-data-lists
 ```
 
-## Implementations
+## Implementation
+
+### HTML
+
+```html
+<div class="data-list">
+  <header class="data-list-heading">
+    <h3>Customer List</h3>
+    <p>A list of active customers</p>
+  </header>
+  <section class="data-list-items">
+    <dl>
+      <div>
+        <dt><span>Elizabeth Rogers</span></dt>
+        <dd>
+          <span>Senior Front End Developer</span>
+          <span>Austin TX</span>
+          <span>United States</span>
+          <button>Edit</button>
+          <button class="text-danger">Remove</button>
+        </dd>
+      </div>
+      <div>
+        <dt><span>Elizabeth Rogers</span></dt>
+        <dd>
+          <span>Senior Front End Developer</span>
+          <span>Austin TX</span>
+          <span>United States</span>
+          <button>Edit</button>
+          <button class="text-danger">Remove</button>
+        </dd>
+      </div>
+      <div>
+        <dt><span>Elizabeth Rogers</span></dt>
+        <dd>
+          <span>Senior Front End Developer</span>
+          <span>Austin TX</span>
+          <span>United States</span>
+          <button>Edit</button>
+          <button class="text-danger">Remove</button>
+        </dd>
+      </div>
+      <div>
+        <dt><span>Elizabeth Rogers</span></dt>
+        <dd>
+          <span>Senior Front End Developer</span>
+          <span>Austin TX</span>
+          <span>United States</span>
+          <button>Edit</button>
+          <button class="text-danger">Remove</button>
+        </dd>
+      </div>
+      <div>
+        <dt><span>Elizabeth Rogers</span></dt>
+        <dd>
+          <span>Senior Front End Developer</span>
+          <span>Austin TX</span>
+          <span>United States</span>
+          <button>Edit</button>
+          <button class="text-danger">Remove</button>
+        </dd>
+      </div>
+    </dl>
+  </section>
+</div>
+```
+
+### Scss
 
 ```scss
 .data-list {
