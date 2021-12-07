@@ -6,8 +6,8 @@
     (
       color: $text-color,
       background-color: $main-background,
-      max-width: 1024px,
-      max-height: 500px,
+      max-width: 100%,
+      max-height: 100%,
     ),
     $config
   );
@@ -17,33 +17,37 @@
   $max-width: map-get($config, max-width);
   $max-height: map-get($config, max-height);
 
-  // margin-left: auto;
-  // margin-right: auto;
   border-radius: $border-radius;
   border: $border;
   box-shadow: $shadow;
   background-color: $background-color;
   overflow-y: auto;
-  // max-height: $max-height;
   max-width: $max-width;
   position: relative;
 
-  &::-webkit-scrollbar {
-    width: 0px;
-    background: transparent; /* Chrome/Safari/Webkit */
-  }
+  @if ($max-height != 100%) {
+    max-height: $max-height;
 
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE 10+ */
+    &::-webkit-scrollbar {
+      width: 0px;
+      background: transparent; /* Chrome/Safari/Webkit */
+    }
+
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
 
   .data-list-heading {
     background-color: $background-color;
     padding: $base-fontsize ($base-fontsize * 1.5);
     box-shadow: $header-shadow;
-    position: sticky;
-    top: 0;
-    left: 0;
     border-radius: $border-radius $border-radius 0 0;
+
+    @if ($max-height != 100%) {
+      position: sticky;
+      top: 0;
+      left: 0;
+    }
 
     h3 {
       font-size: $base-fontsize * 1.5;
