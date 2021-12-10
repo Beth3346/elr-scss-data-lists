@@ -8,7 +8,7 @@
 
 a scss mixin for data-lists
 
-[View Demo](https://elr-data-lists.netlify.app/)
+<!-- [View Demo](https://elr-data-lists.netlify.app/) -->
 
 ## Installation
 
